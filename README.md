@@ -35,8 +35,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/Samuel-jacobs/Easy-Banking)
-- Live Site URL: [Add live site URL here](https://samuel-jacobs.github.io/Easy-Banking)
+- Solution URL: [https://github.com/Samuel-jacobs/Easy-Banking](https://github.com/Samuel-jacobs/Easy-Banking)
+- Live Site URL: [https://samuel-jacobs.github.io/Easy-Banking](https://samuel-jacobs.github.io/Easy-Banking)
 
 ## My process
 
