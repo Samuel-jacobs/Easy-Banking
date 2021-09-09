@@ -1,11 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap');
+
 html, body {
   width: 100%;
   height: 100%;
   padding: 0;
   margin: 0;
   overflow-x: hidden;
-  font-size: 18px;
-  
+  font-size: 18px; 
 }
 * {
   box-sizing: border-box;
@@ -13,11 +14,18 @@ html, body {
 }
 p {
   color: hsl(233, 8%, 62%);
+  font-family: 'Public Sans', sans-serif;
+  font-weight: 400;
 }
 a:link {
   text-decoration: none;
+  font-family: 'Public Sans', sans-serif;
+  font-weight: 300;
 }
-
+h1, h2, h3 {
+  font-family: 'Public Sans', sans-serif;
+  font-weight: 700;
+}
 .navbar-nav {
   margin: 0 auto;
   
@@ -59,6 +67,7 @@ a.btn1 {
 }
 .banner {
   background-color: hsl(0, 0%, 98%); 
+  
 }
 #section1 {
   background-color: hsl(220, 16%, 96%);
@@ -87,12 +96,13 @@ a.f-link:hover {
 }
 .f-icon {
   color: #ffff;
+  
 }
 .f-icon:hover {
   color: hsl(136, 65%, 51%);
 }
 @media screen and (max-width: 767px) {
- 
+  
   .navbar-nav {
     text-align: center;
   }
@@ -114,6 +124,7 @@ a.f-link:hover {
     background-repeat: no-repeat;
     background-position: top center;
     background-size: contain;
+    margin: auto;
     
   }
   .banner-bg {
@@ -122,7 +133,7 @@ a.f-link:hover {
   img.b-image {
     position: absolute;
     height: auto;
-    width: 100%;
+    width: 95%;
     top: -25%;
   }
   .banner-text {
