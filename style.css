@@ -9,7 +9,7 @@ html, body {
 }
 * {
   box-sizing: border-box;
-  overflow-x: hidden;
+  
 }
 p {
   color: hsl(233, 8%, 62%);
@@ -18,22 +18,47 @@ a:link {
   text-decoration: none;
 }
 
-
 .navbar-nav {
   margin: 0 auto;
   
 }
 .nav-links {
   padding: 0 15px;
+  position: relative;
+}
+.nav-links::after {
+  content: "";
+  position: absolute;
+  
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 5px;
+	background-color: hsl(136, 65%, 51%);
+	transform: scaleX(0);
+	
+	transition: transform 250ms ease-in;
+}
+.nav-links:hover::after {
+  transform: scaleX(1);
+}
+a.nav-links {
+  color: hsl(233, 8%, 62%);
 }
 .btn1 {
   border-radius: 20px;
   background-image: linear-gradient(to right, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
 }
+a.btn1 {
+  color: white;
+  opacity: 1;
+}
+.btn1:hover {
+  opacity: 0.8;
+  color: white;
+}
 .banner {
-  
-  background-color: hsl(0, 0%, 98%);
-  
+  background-color: hsl(0, 0%, 98%); 
 }
 #section1 {
   background-color: hsl(220, 16%, 96%);
@@ -49,11 +74,41 @@ a:link {
 }
 a.f-link {
   display: block;
+  color: hsl(233, 8%, 62%);
+}
+a.f-link:hover {
+  color:hsl(136, 65%, 51%);
 }
 .f-logo {
-  filter: white;
+  color: white;
+}
+.f-right {
+  display: none;
+}
+.f-icon {
+  color: #ffff;
+}
+.f-icon:hover {
+  color: hsl(136, 65%, 51%);
 }
 @media screen and (max-width: 767px) {
+ 
+  .navbar-nav {
+    text-align: center;
+  }
+  .navbar-nav1 {
+    margin: 20px; 
+    background-color: white;
+  }
+  .nav-links {
+    padding-bottom: 20px;
+  }
+  .nav-item {
+    padding: 10px 0;
+  }
+  .cta {
+    display: none;
+  }
   .banner {
     background-image: url(images/bg-intro-mobile.svg);
     background-repeat: no-repeat;
@@ -64,17 +119,20 @@ a.f-link {
   .banner-bg {
     height: 500px;
   }
-  img.banner-img {
+  img.b-image {
     position: absolute;
     height: auto;
     width: 100%;
     top: -25%;
   }
   .banner-text {
-    padding: 0 30px;
+    padding-top: 5%;
+    padding-left: 30px;
+    padding-right: 30px;
     text-align: center;
     padding-bottom: 50px;
   }
+  
   #section1 {
     text-align: center;
     padding: 50px 30px;
@@ -84,7 +142,7 @@ a.f-link {
     padding: 10px 0;
   }
   #section2 {
-    padding: 50px 20px;
+    padding: 50px 20px 100px 20px;
     
   }
   .card {
@@ -98,7 +156,7 @@ a.f-link {
   }
   #footer {
     text-align: center;
-    padding: 50px 0;
+    padding: 50px 0 30px 0;
 
   }
   .social-icons {
@@ -111,33 +169,47 @@ a.f-link {
     margin: 20px 0;
   }
   .attribution {
+    padding-top: 20px;
     font-size: 11px;
   }
 }
+
 @media screen and (min-width: 768px) {
   .navbar {
-    padding: 20px 100px;
+    padding: 10px 100px;
+  }
+  .nav-links{
+    padding-bottom: 30%;
+  }
+  
+  .banner {
+    margin: auto;
+    height: 600px;
+  }
+  .banner-image {
+    left: 50%;
+  }
+  .banner-text {
+    padding-left: 120px;
+    padding-top: 50px;
+    padding-right: 100px;
+    margin: auto;
+    right: 50%;
+  }
+  .b-image {
+    height: 120%;
+    width: 100%;
   }
   .banner-bg {
     background-image: url(images/bg-intro-desktop.svg);
     background-repeat: no-repeat;
-    background-position: left;
     background-size: 900px;
-    height: 500px;
-    left: 50%;
-  }
-  img.banner-img {
-    position: relative;
-    height: 120%;
-    width: 100%;
-    
-  }
-  .banner-text {
-    padding: 150px 100px 100px 0;
-    right: 50%;
+    background-position: left;
+    height: 600px;
+    right: 10%;
   }
   #section1 {
-    padding: 80px;
+    padding: 100px;
   }
   .intro-p {
     width: 60%;
@@ -146,10 +218,10 @@ a.f-link {
     padding-top: 30px;
   }
   #section2 {
-    padding: 50px 80px;
+    padding: 50px 100px 100px 100px;
   }
   .articles {
-    padding-top: 30px;
+    padding-top: 30px; 
   }
   #footer {
     padding: 40px 100px;
@@ -174,5 +246,47 @@ a.f-link {
     text-align: center;
     padding-top: 20px;
     font-size: 12px;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 767px) {
+  .banner-text {
+    padding-top: 35%;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .navbar {
+    padding: 20px 50px;
+  }
+  
+  .banner-text {
+    padding-left: 80px;
+  }
+ 
+  #footer {
+    padding: 40px 50px 30px 50px;
+  }
+  .f-link1 {
+    padding-left: 40px;
+  }
+  .f-rights {
+    display: none;
+  }
+  .f-right {
+    padding-top: 20px;
+    font-size: 12px;
+    display: block;
+  }
+  
+  .f-btn {
+    position: absolute;
+    left: 0;
+    
+    width: 150px;
+
+  }
+  .attribution {
+    padding-top: 0;
   }
 }
